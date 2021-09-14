@@ -25,6 +25,7 @@ a {
   align-items: center;
   justify-content: space-around;
   height: 60px;
+  position: relative;
 }
 
 .nav-links {
@@ -438,20 +439,18 @@ input:focus {
   body {
     overflow-x: hidden;
   }
-  /* html {
+  html {
     overflow-x: hidden;
-  } */
+  }
 
   /* ------------------navbar------------------------------ */
-  .nav-logo {
-    position: relative;
-    left: 87px;
-    z-index: 100;
+
+  ul.nav-links.nav-active {
+    transform: translateX(4px);
   }
-  .nav-links {
-    width: 120%;
-    left: -1146px;
-    z-index: 1;
+  ul.nav-links {
+    width: 100%;
+    z-index: 10;
   }
   .burger {
     z-index: 100;
@@ -459,6 +458,11 @@ input:focus {
   .nav-links li {
     top: 70px;
     left: -36px;
+  }
+  .nav-logo {
+    position: relative;
+    left: 87px;
+    z-index: 100;
   }
   /* ---------------------Main section--------------------------- */
   .main {
@@ -475,19 +479,19 @@ input:focus {
   .main .left img {
     display: none;
   }
-
   .main .right h1 {
+    margin-bottom: 12px;
+    font-weight: 100;
+    text-transform: uppercase;
     font-size: 60px;
-    width: 77%;
     margin-left: -33px;
   }
   .main .right p {
-    margin: 0px;
-    padding: 0px;
+    padding: 10px;
     font-size: 17px;
-    line-height: 18px;
-    width: 77%;
-    margin-left: -24px;
+    line-height: 20px;
+    width: 110%;
+    margin-left: -39px;
   }
   .main .right .btn {
     margin-left: -24px;
